@@ -23,12 +23,16 @@ scalaJSUseMainModuleInitializer := true
 
 jsEnv := new org.scalajs.jsenv.nodejs.NodeJSEnv()
 
+libraryDependencies ++= Seq(
+//  "org.scala-lang.modules" %%% "scala-xml" % "1.2.0"
+)
+
 npmDependencies in Compile ++= Seq(
-  "uuid" -> "3.3.3",
+//  "uuid" -> "3.3.3",
 )
 
 libraryDependencies ++= Seq(
-  ScalablyTyped.U.uuid
+//  ScalablyTyped.U.uuid
 )
 
 libraryDependencies ++= Seq(

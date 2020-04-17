@@ -2,10 +2,9 @@ name := "_scalajs"
 
 version := "0.1"
 
-scalaVersion := "2.12.10"
+scalaVersion := "2.13.1"
 
-scalacOptions ++= Seq( "-deprecation", "-feature", "-unchecked", "-language:postfixOps", "-language:implicitConversions", "-language:existentials",
-  "-P:scalajs:sjsDefinedByDefault" )
+scalacOptions ++= Seq( "-deprecation", "-feature", "-unchecked", "-language:postfixOps", "-language:implicitConversions", "-language:existentials")
 
 organization := "xyz.hyperreal"
 
@@ -36,17 +35,13 @@ libraryDependencies ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "org.scalatest" %%% "scalatest" % "3.0.8" % "test",
-  "org.scalacheck" %%% "scalacheck" % "1.14.1" % "test"
+  "org.scalatest" %%% "scalatest" % "3.1.1" % "test"
+  //"org.scalacheck" %%% "scalacheck" % "1.14.1" % "test"
 )
 
 coverageExcludedPackages := ".*Main"
 
 mainClass in (Compile, run) := Some( "xyz.hyperreal." + name.value.replace('-', '_') + ".Main" )
-
-mainClass in assembly := Some( "xyz.hyperreal." + name.value.replace('-', '_') + ".Main" )
-
-assemblyJarName in assembly := name.value + "-" + version.value + ".jar"
 
 publishMavenStyle := true
 

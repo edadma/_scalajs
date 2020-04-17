@@ -1,6 +1,3 @@
-package xyz.hyperreal.name
+package xyz.hyperreal._scalajs
 
-
-object Main extends App {
-
-}
+object Main extends App {}

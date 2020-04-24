@@ -16,7 +16,7 @@ resolvers += "Hyperreal Repository" at "https://dl.bintray.com/edadma/maven"
 
 enablePlugins(ScalaJSPlugin)
 
-enablePlugins(ScalaJSBundlerPlugin)
+enablePlugins(ScalablyTypedConverterPlugin)
 
 scalaJSUseMainModuleInitializer := true
 
@@ -27,19 +27,14 @@ libraryDependencies ++= Seq(
 )
 
 npmDependencies in Compile ++= Seq(
-//  "uuid" -> "3.3.3",
-)
-
-libraryDependencies ++= Seq(
-//  ScalablyTyped.U.uuid
+  "shortid" -> "2.2.15",
+  "@types/shortid" -> "0.0.29"
 )
 
 libraryDependencies ++= Seq(
   "org.scalatest" %%% "scalatest" % "3.1.1" % "test"
   //"org.scalacheck" %%% "scalacheck" % "1.14.1" % "test"
 )
-
-coverageExcludedPackages := ".*Main"
 
 mainClass in (Compile, run) := Some( "xyz.hyperreal." + name.value.replace('-', '_') + ".Main" )
 

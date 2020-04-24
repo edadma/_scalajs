@@ -1,3 +1,9 @@
 package xyz.hyperreal._scalajs
 
-object Main extends App {}
+import typings.shortid
+
+object Main extends App {
+
+  println(shortid.mod.^.generate())
+
+}

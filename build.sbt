@@ -2,7 +2,7 @@ name := "_scalajs"
 
 version := "0.1"
 
-scalaVersion := "2.13.1"
+scalaVersion := "2.13.2"
 
 scalacOptions ++= Seq( "-deprecation", "-feature", "-unchecked", "-language:postfixOps", "-language:implicitConversions", "-language:existentials")
 
@@ -34,6 +34,10 @@ npmDependencies in Compile ++= Seq(
 libraryDependencies ++= Seq(
   "org.scalatest" %%% "scalatest" % "3.1.1" % "test"
   //"org.scalacheck" %%% "scalacheck" % "1.14.1" % "test"
+)
+
+libraryDependencies ++= Seq(
+  "org.scala-js" %%% "scalajs-java-time" % "1.0.0"
 )
 
 mainClass in (Compile, run) := Some( "xyz.hyperreal." + name.value.replace('-', '_') + ".Main" )

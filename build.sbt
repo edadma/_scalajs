@@ -2,7 +2,7 @@ name := "_scalajs"
 
 version := "0.1"
 
-scalaVersion := "2.13.2"
+scalaVersion := "2.13.3"
 
 scalacOptions ++= Seq( "-deprecation", "-feature", "-unchecked", "-language:postfixOps", "-language:implicitConversions", "-language:existentials")
 
@@ -27,8 +27,6 @@ libraryDependencies ++= Seq(
 )
 
 npmDependencies in Compile ++= Seq(
-  "shortid" -> "2.2.15",
-  "@types/shortid" -> "0.0.29"
 )
 
 libraryDependencies ++= Seq(

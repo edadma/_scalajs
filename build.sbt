@@ -38,7 +38,7 @@ libraryDependencies ++= Seq(
   "org.scala-js" %%% "scalajs-java-time" % "1.0.0"
 )
 
-mainClass in (Compile, run) := Some( "xyz.hyperreal." + name.value.replace('-', '_') + ".Main" )
+mainClass in (Compile, run) := Some( s"${organization.value}.${name.value.replace('-', '_')}.Main" )
 
 publishMavenStyle := true
 

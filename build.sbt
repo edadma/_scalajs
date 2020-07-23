@@ -18,6 +18,10 @@ enablePlugins(ScalaJSPlugin)
 
 enablePlugins(ScalablyTypedConverterPlugin)
 
+Test / scalaJSUseMainModuleInitializer := true
+
+Test / scalaJSUseTestModuleInitializer := false
+
 scalaJSUseMainModuleInitializer := true
 
 jsEnv := new org.scalajs.jsenv.nodejs.NodeJSEnv()

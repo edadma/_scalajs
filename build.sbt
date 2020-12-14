@@ -4,7 +4,7 @@ version := "0.1.0-snapshot.1"
 
 scalaVersion := "2.13.4"
 
-scalacOptions ++= Seq( "-deprecation", "-feature", "-unchecked", "-language:postfixOps", "-language:implicitConversions", "-language:existentials", "-language:dynamics")
+scalacOptions ++= Seq( "-deprecation", "-feature", "-unchecked", "-language:postfixOps", "-language:implicitConversions", "-language:existentials", "-language:dynamics", "-Xasync")
 
 organization := "xyz.hyperreal"
 
@@ -27,7 +27,8 @@ scalaJSUseMainModuleInitializer := true
 jsEnv := new org.scalajs.jsenv.nodejs.NodeJSEnv()
 
 libraryDependencies ++= Seq(
-//  "org.scala-lang.modules" %%% "scala-xml" % "1.2.0"
+  "org.scala-lang.modules" %% "scala-async" % "0.10.0",
+  "org.scala-lang" % "scala-reflect" % scalaVersion.value % Provided
 )
 
 npmDependencies in Compile ++= Seq(
